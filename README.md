@@ -1,8 +1,8 @@
 <p align="center">
-  <img src="assets/Logo.svg" alt="Potch Logo" width="120" height="120" />
+  <img src="assets/Logo.png" alt="BringNode Logo" width="120" height="120" />
 </p>
 
-<h1 align="center">Potch (Beta)</h1>
+<h1 align="center">BringNode (Beta)</h1>
 
 <p align="center">
   <strong>The Ultimate Dynamic Island for macOS</strong><br>
@@ -10,8 +10,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/izyouna/Potch.update/raw/main/Potch.dmg">
-    <img src="https://img.shields.io/badge/Download-Potch.dmg-black?style=for-the-badge&logo=apple" alt="Download Potch DMG" />
+  <a href="https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg">
+    <img src="https://img.shields.io/badge/Download-BringNode.dmg-black?style=for-the-badge&logo=apple" alt="Download BringNode DMG" />
   </a>
 </p>
 
@@ -31,10 +31,10 @@
 Open **Terminal** on your Mac, paste the following command, and press **Enter**:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/izyouna/Potch.update/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/izyouna/BringNode.update/main/install.sh | bash
 ```
 
-> ✨ **What this does:** Automatically downloads the latest release, installs it directly to `/Applications`, **bypasses macOS Gatekeeper quarantine**, and launches Potch instantly in under 5 seconds — no manual permission clicks required.
+> ✨ **What this does:** Automatically downloads the latest release, installs it directly to `/Applications`, **bypasses macOS Gatekeeper quarantine**, and launches BringNode instantly in under 5 seconds — no manual permission clicks required.
 
 ---
 
@@ -42,16 +42,16 @@ curl -fsSL https://raw.githubusercontent.com/izyouna/Potch.update/main/install.s
 
 | Format | Download Link | Size | Description |
 | :--- | :--- | :--- | :--- |
-| **Apple Disk Image** | [**📥 Download Potch.dmg**](https://github.com/izyouna/Potch.update/raw/main/Potch.dmg) | ~15 MB | Standard macOS disk installer with drag-to-Applications |
+| **Apple Disk Image** | [**📥 Download BringNode.dmg**](https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg) | ~15 MB | Standard macOS disk installer with drag-to-Applications |
 
 #### Installation Steps:
-1. Download [**`Potch.dmg`**](https://github.com/izyouna/Potch.update/raw/main/Potch.dmg) and open it.
-2. Drag **`Potch`** into your **`Applications`** folder.
-3. Open Potch. If macOS displays *"Apple could not verify “Potch” is free of malware..."*:
+1. Download [**`BringNode.dmg`**](https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg) and open it.
+2. Drag **`BringNode`** into your **`Applications`** folder.
+3. Open BringNode. If macOS displays *"Apple could not verify “BringNode” is free of malware..."*:
    - **Method A (System Settings — No Terminal):** Go to **System Settings** > **Privacy & Security**, scroll down to **Security**, and click **"Open Anyway"**.
    - **Method B (Instant 1-second fix in Terminal):**
      ```bash
-     xattr -cr /Applications/Potch.app
+     xattr -cr /Applications/BringNode.app
      ```
 
 ---
@@ -59,19 +59,19 @@ curl -fsSL https://raw.githubusercontent.com/izyouna/Potch.update/main/install.s
 ## 🔄 Automatic In-App Updates
 
 > 💡 **All install methods receive 100% automatic in-app updates.**  
-> Whether installed via the **Terminal Script** or **`Potch.dmg`**, Potch connects to the built-in [Sparkle Auto-Update](https://raw.githubusercontent.com/izyouna/Potch.update/main/appcast.xml) system in the background. Whenever a new release or hotfix is published, the app downloads and installs updates seamlessly on its own — **you never need to manually download new disk images.**
+> Whether installed via the **Terminal Script** or **`BringNode.dmg`**, BringNode connects to the built-in [Sparkle Auto-Update](https://raw.githubusercontent.com/izyouna/BringNode.update/main/appcast.xml) system in the background. Whenever a new release or hotfix is published, the app downloads and installs updates seamlessly on its own — **you never need to manually download new disk images.**
 
 ---
 
 ## 🖼️ UI Showcase & Features
 
-These screenshots were captured directly from the running Potch app. The island adapts to your display, appearing around the MacBook notch or as a floating island on external displays.
+These screenshots were captured directly from the running BringNode app. The island adapts to your display, appearing around the MacBook notch or as a floating island on external displays.
 
 ### 🎵 1. Now Playing & Mascot Companion
 Your music, playback controls, and Mochi together in one compact island.
 
 <p align="center">
-  <img src="assets/potch_now_playing.png" alt="Potch during live playback from TheETCband, showing album artwork, elapsed time, progress, playback controls, and Mochi" width="848" />
+  <img src="assets/potch_now_playing.png" alt="BringNode during live playback from TheETCband, showing album artwork, elapsed time, progress, playback controls, and Mochi" width="848" />
 </p>
 
 *Captured during live playback from TheETCband.*
@@ -83,10 +83,10 @@ Your music, playback controls, and Mochi together in one compact island.
 ---
 
 ### 📱 2. Multi-Widget Ecosystem & Activity Cards
-Open Widgets to browse Potch’s tools from the island. The screenshot below shows the actual widget launcher, with Calendar and Weather visible and more tools available by scrolling.
+Open Widgets to browse BringNode’s tools from the island. The screenshot below shows the actual widget launcher, with Calendar and Weather visible and more tools available by scrolling.
 
 <p align="center">
-  <img src="assets/potch_widgets.png" alt="Potch Widgets launcher showing Calendar and Weather cards" width="812" />
+  <img src="assets/potch_widgets.png" alt="BringNode Widgets launcher showing Calendar and Weather cards" width="812" />
 </p>
 
 - 📅 **Calendar** and ☀️ **Weather**
