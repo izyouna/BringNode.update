@@ -1,11 +1,11 @@
 #!/bin/bash
-# One-line installer for Potch (macOS)
-# Downloads latest Potch, installs to /Applications, removes Gatekeeper quarantine, and launches.
+# One-line installer for BringNode (macOS)
+# Downloads latest BringNode, installs to /Applications, removes Gatekeeper quarantine, and launches.
 set -euo pipefail
 
 echo ""
 echo "=========================================================="
-echo "🏝️  Installing Potch for macOS..."
+echo "🏝️  Installing BringNode for macOS..."
 echo "=========================================================="
 echo ""
 
@@ -15,33 +15,33 @@ cleanup() {
 }
 trap cleanup EXIT
 
-DMG_URL="https://github.com/izyouna/Potch.update/raw/main/Potch.dmg"
+DMG_URL="https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg"
 
-echo "==> 1. Downloading latest Potch.dmg..."
-curl -fL --progress-bar "$DMG_URL" -o "$TMP_DIR/Potch.dmg"
+echo "==> 1. Downloading latest BringNode.dmg..."
+curl -fL --progress-bar "$DMG_URL" -o "$TMP_DIR/BringNode.dmg"
 
 echo "==> 2. Mounting disk image..."
 MOUNT_DIR="$TMP_DIR/mount"
 mkdir -p "$MOUNT_DIR"
-hdiutil attach "$TMP_DIR/Potch.dmg" -nobrowse -mountpoint "$MOUNT_DIR" -quiet
+hdiutil attach "$TMP_DIR/BringNode.dmg" -nobrowse -mountpoint "$MOUNT_DIR" -quiet
 
 echo "==> 3. Installing to /Applications..."
-pkill -f "/Applications/Potch.app/Contents/MacOS/Potch" 2>/dev/null || true
-rm -rf /Applications/Potch.app
-cp -R "$MOUNT_DIR/Potch.app" /Applications/
+pkill -f "/Applications/BringNode.app/Contents/MacOS/BringNode" 2>/dev/null || true
+rm -rf /Applications/BringNode.app
+cp -R "$MOUNT_DIR/BringNode.app" /Applications/
 
 echo "==> 4. Unmounting disk image..."
 hdiutil detach "$MOUNT_DIR" -quiet 2>/dev/null || true
 
 echo "==> 5. Bypassing macOS Gatekeeper quarantine..."
-xattr -cr /Applications/Potch.app 2>/dev/null || true
+xattr -cr /Applications/BringNode.app 2>/dev/null || true
 
-echo "==> 6. Launching Potch..."
-open /Applications/Potch.app
+echo "==> 6. Launching BringNode..."
+open /Applications/BringNode.app
 
 echo ""
 echo "=========================================================="
-echo "✅ Potch has been installed and launched successfully!"
-echo "   Location: /Applications/Potch.app"
+echo "✅ BringNode has been installed and launched successfully!"
+echo "   Location: /Applications/BringNode.app"
 echo "=========================================================="
 echo ""
