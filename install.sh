@@ -1,47 +1,41 @@
 #!/bin/bash
-# One-line installer for BringNode (macOS)
-# Downloads latest BringNode, installs to /Applications, removes Gatekeeper quarantine, and launches.
+# Verified first installation; never remove quarantine or disable Gatekeeper.
 set -euo pipefail
-
-echo ""
-echo "=========================================================="
-echo "🏝️  Installing BringNode for macOS..."
-echo "=========================================================="
-echo ""
-
-TMP_DIR=$(mktemp -d /tmp/potch-install.XXXXXX)
+POTCH_INSTALL_TMP=$(mktemp -d /tmp/potch-install.XXXXXX)
+POTCH_INSTALL_MOUNT="$POTCH_INSTALL_TMP/mount"
+POTCH_INSTALL_STAGE=""
 cleanup() {
-    rm -rf "$TMP_DIR"
+    hdiutil detach "$POTCH_INSTALL_MOUNT" -quiet 2>/dev/null || true
+    if [ -n "$POTCH_INSTALL_STAGE" ]; then rm -rf "$POTCH_INSTALL_STAGE"; fi
+    rm -rf "$POTCH_INSTALL_TMP"
 }
 trap cleanup EXIT
-
-DMG_URL="https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg"
-
-echo "==> 1. Downloading latest BringNode.dmg..."
-curl -fL --progress-bar "$DMG_URL" -o "$TMP_DIR/BringNode.dmg"
-
-echo "==> 2. Mounting disk image..."
-MOUNT_DIR="$TMP_DIR/mount"
-mkdir -p "$MOUNT_DIR"
-hdiutil attach "$TMP_DIR/BringNode.dmg" -nobrowse -mountpoint "$MOUNT_DIR" -quiet
-
-echo "==> 3. Installing to /Applications..."
-pkill -f "/Applications/BringNode.app/Contents/MacOS/BringNode" 2>/dev/null || true
-rm -rf /Applications/BringNode.app
-cp -R "$MOUNT_DIR/BringNode.app" /Applications/
-
-echo "==> 4. Unmounting disk image..."
-hdiutil detach "$MOUNT_DIR" -quiet 2>/dev/null || true
-
-echo "==> 5. Bypassing macOS Gatekeeper quarantine..."
-xattr -cr /Applications/BringNode.app 2>/dev/null || true
-
-echo "==> 6. Launching BringNode..."
+if pgrep -x BringNode >/dev/null; then
+    echo "Quit BringNode before installing, then run this installer again." >&2
+    exit 1
+fi
+curl --fail --location --proto '=https' --proto-redir '=https' 'https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg' -o "$POTCH_INSTALL_TMP/BringNode.dmg"
+mkdir "$POTCH_INSTALL_MOUNT"
+hdiutil attach "$POTCH_INSTALL_TMP/BringNode.dmg" -readonly -nobrowse -mountpoint "$POTCH_INSTALL_MOUNT" -quiet
+POTCH_INSTALL_APP="$POTCH_INSTALL_MOUNT/BringNode.app"
+codesign --verify --deep --strict "$POTCH_INSTALL_APP"
+POTCH_INSTALL_SIGNATURE=$(codesign -dvvv "$POTCH_INSTALL_APP" 2>&1)
+if ! printf '%s\n' "$POTCH_INSTALL_SIGNATURE" | grep -q '^Authority=Developer ID Application:' ||
+   ! printf '%s\n' "$POTCH_INSTALL_SIGNATURE" | grep -q '^TeamIdentifier=256AUJ9555$' ||
+   ! printf '%s\n' "$POTCH_INSTALL_SIGNATURE" | grep -Eq 'flags=0x[0-9a-f]+\([^)]*runtime'; then
+    echo "The downloaded app does not have the expected production signature." >&2
+    exit 1
+fi
+if [ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$POTCH_INSTALL_APP/Contents/Info.plist")" != 'com.bringnode.app' ]; then
+    echo "Unexpected application identity." >&2; exit 1
+fi
+spctl --assess --type execute --verbose=2 "$POTCH_INSTALL_APP"
+POTCH_INSTALL_STAGE=$(mktemp -d /Applications/.BringNode-install.XXXXXX)
+ditto "$POTCH_INSTALL_APP" "$POTCH_INSTALL_STAGE/BringNode.app"
+codesign --verify --deep --strict "$POTCH_INSTALL_STAGE/BringNode.app"
+if [ -e /Applications/BringNode.app ]; then mv /Applications/BringNode.app "$POTCH_INSTALL_STAGE/Previous.app"; fi
+if ! mv "$POTCH_INSTALL_STAGE/BringNode.app" /Applications/BringNode.app; then
+    if [ -e "$POTCH_INSTALL_STAGE/Previous.app" ]; then mv "$POTCH_INSTALL_STAGE/Previous.app" /Applications/BringNode.app; fi
+    exit 1
+fi
 open /Applications/BringNode.app
-
-echo ""
-echo "=========================================================="
-echo "✅ BringNode has been installed and launched successfully!"
-echo "   Location: /Applications/BringNode.app"
-echo "=========================================================="
-echo ""
