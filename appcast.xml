@@ -6,6 +6,31 @@
         <description>Most recent updates for Potch.</description>
         <language>en</language>
         <item>
+            <title>1.0.0-beta.21</title>
+            <pubDate>Fri, 06 Nov 2026 00:47:39 +0700</pubDate>
+            <sparkle:version>21</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.21</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; padding: 12px 18px; }
+  h1 { font-size: 22px; line-height: 1.3; }
+  h2 { font-size: 16px; margin-top: 24px; }
+  li { margin-bottom: 8px; }
+</style>
+<h1>BringNode Beta 21</h1>
+<ul>
+  <li>แก้ปัญหาแอปเปิดไม่ขึ้นหลังอัปเดตเป็น Beta 20<br>Fixed BringNode not opening after updating to Beta 20.</li>
+  <li>แสดงหน้าต้อนรับอีกครั้งหลังอัปเดตแต่ละเวอร์ชัน<br>The welcome screen now appears again after each update.</li>
+  <li>การ์ดอัปเดตแสดงทันทีและค้างไว้จนกว่าจะกดอัปเดต<br>The update card now appears right away and stays until you update.</li>
+  <li>เปลี่ยนอีเมลสำหรับส่งความคิดเห็นเป็น BringNode@gmail.com<br>Feedback now goes to BringNode@gmail.com.</li>
+</ul>
+<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ BringNode และส่งความคิดเห็นครับ<br>Thank you for trying BringNode and sharing your feedback.</p>
+]]></description>
+            <enclosure url="https://github.com/izyouna/BringNode.update/raw/main/BringNode-1.0.0-beta.21.zip" length="20505692" type="application/octet-stream" sparkle:edSignature="7ibEPlLde7StokqlCwxrDcf3kAjwN6q5/hc0dXMtkg6q7FNo1zu0FTSxpzXU+csAFqJIdN4X1LJBSAempx8CAg=="/>
+        </item>
+        <item>
             <title>1.0.0-beta.20</title>
             <pubDate>Fri, 06 Nov 2026 00:36:53 +0700</pubDate>
             <sparkle:version>20</sparkle:version>
