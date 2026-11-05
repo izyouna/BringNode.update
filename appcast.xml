@@ -6,6 +6,32 @@
         <description>Most recent updates for Potch.</description>
         <language>en</language>
         <item>
+            <title>1.0.0-beta.18</title>
+            <pubDate>Thu, 05 Nov 2026 23:50:58 +0700</pubDate>
+            <sparkle:version>18</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.18</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <description><![CDATA[<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; padding: 12px 18px; }
+  h1 { font-size: 22px; line-height: 1.3; }
+  h2 { font-size: 16px; margin-top: 24px; }
+  li { margin-bottom: 8px; }
+</style>
+<h1>BringNode Beta 18</h1>
+<ul>
+  <li>เปลี่ยนชื่อแอปเป็น BringNode<br>Renamed the app to BringNode.</li>
+  <li>เพิ่ม 14 ภาษา และตัวเลือกให้ใช้ภาษาตามระบบ<br>Added 14 languages and a System language option.</li>
+  <li>แสดงการอัปเดตใหม่เป็นการ์ดบนไอส์แลนด์<br>Available updates now appear as an island card.</li>
+  <li>นำเสียงและมาสคอตเดิมออก<br>Removed the old sounds and mascot.</li>
+</ul>
+<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ BringNode และส่งความคิดเห็นครับ<br>Thank you for trying BringNode and sharing your feedback.</p>
+]]></description>
+            <enclosure url="https://github.com/izyouna/BringNode.update/raw/main/BringNode-1.0.0-beta.18.zip" length="22706165" type="application/octet-stream" sparkle:edSignature="1s1OQRTNYzLbB0S92Qm9SHRYhgyxdLiavZ+a8u1VP0t/xmyRpj5BBkIqVCJY7/HB0mGwrW8C1PEgR+EWY1udAg=="/>
+        </item>
+        <item>
             <title>1.0.0-beta.17</title>
             <pubDate>Sat, 17 Oct 2026 21:03:28 +0700</pubDate>
             <sparkle:version>17</sparkle:version>
@@ -52,31 +78,6 @@
 <p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ Potch และส่งความคิดเห็นครับ<br>Thank you for trying Potch and sharing your feedback.</p>
 ]]></description>
             <enclosure url="https://github.com/izyouna/Potch.update/raw/main/Potch-1.0.0-beta.16.zip" length="13226165" type="application/octet-stream" sparkle:edSignature="ob/s7shjiVTCj6z/SDpDk9JNs7X35KiIzHLC1qAm2GQ1Z1iLNjfxJ7NxybSfbPA3I945MMpuO2G2FnqDb+P5BQ=="/>
-        </item>
-        <item>
-            <title>1.0.0-beta.15</title>
-            <pubDate>Sat, 17 Oct 2026 02:47:38 +0700</pubDate>
-            <sparkle:version>15</sparkle:version>
-            <sparkle:shortVersionString>1.0.0-beta.15</sparkle:shortVersionString>
-            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
-            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
-            <description><![CDATA[<meta charset="utf-8">
-<style>
-  :root { color-scheme: light dark; }
-  body { font: 14px -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; padding: 12px 18px; }
-  h1 { font-size: 22px; line-height: 1.3; }
-  h2 { font-size: 16px; margin-top: 24px; }
-  li { margin-bottom: 8px; }
-</style>
-<h1>Potch Beta 15</h1>
-<ul>
-  <li>ปรับการขยาย Notch ให้ใช้การกางจากกึ่งกลางเป็นหลัก และลดคำสั่งปรับขนาดซ้ำ<br>Unified Notch expansion around the center and removed redundant resizing requests.</li>
-  <li>แยกพื้นเกาะจากการโหลดเนื้อหา เพื่อให้ตำแหน่งคงที่เมื่อเปิดใหม่หลังพัก<br>Separated the island surface from content loading to keep its position stable when reopening after idle.</li>
-  <li>ลดเอฟเฟกต์เลื่อนและจางตอนเปิด Lyrics, Queue และ Outputs<br>Removed slide and fade entrances for Lyrics, Queue and Outputs.</li>
-</ul>
-<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ Potch และส่งความคิดเห็นมาช่วยพัฒนาแอปครับ<br>Thank you for trying Potch and sharing feedback to help us improve.</p>
-]]></description>
-            <enclosure url="https://github.com/izyouna/Potch.update/raw/main/Potch-1.0.0-beta.15.zip" length="13223553" type="application/octet-stream" sparkle:edSignature="YEFu85kKaEg9Tj0/WO2NF7gofhcSWKZHor0LBmGutCBIp0a0WS0aD4/kgU+0I75YFKzORpxXp9p3ZHW3TqJeAw=="/>
         </item>
     </channel>
 </rss>

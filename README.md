@@ -17,7 +17,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Platform-macOS%2015.0%2B%20(Apple%20Silicon)-black?style=flat-square&logo=apple" alt="macOS 15+" />
-  <img src="https://img.shields.io/badge/Version-v1.0.0-beta.17--beta.2-blue?style=flat-square" alt="Version 1.0.0-beta.2" />
+  <img src="https://img.shields.io/badge/Version-v1.0.0-beta.18--beta.2-blue?style=flat-square" alt="Version 1.0.0-beta.2" />
   <img src="https://img.shields.io/badge/Auto--Update-Sparkle%20Integrated-green?style=flat-square" alt="Sparkle Auto-Update" />
   <img src="https://img.shields.io/badge/Native-100%25%20Swift%20%2B%20SwiftUI-orange?style=flat-square&logo=swift" alt="100% Swift" />
 </p>
