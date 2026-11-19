@@ -1,10 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
     <channel>
-        <title>Potch Updates</title>
-        <link>https://raw.githubusercontent.com/izyouna/Potch.ui/main/appcast.xml</link>
-        <description>Most recent updates for Potch.</description>
+        <title>BringNode Updates</title>
+        <link>https://raw.githubusercontent.com/izyouna/BringNode.ui/main/appcast.xml</link>
+        <description>Most recent updates for BringNode.</description>
         <language>en</language>
+        <item>
+            <title>1.0.0-beta.22</title>
+            <pubDate>Fri, 20 Nov 2026 01:30:06 +0700</pubDate>
+            <sparkle:version>22</sparkle:version>
+            <sparkle:shortVersionString>1.0.0-beta.22</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.0</sparkle:minimumSystemVersion>
+            <description><![CDATA[<meta charset="utf-8">
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; padding: 12px 18px; }
+  h1 { font-size: 22px; line-height: 1.3; }
+  h2 { font-size: 16px; margin-top: 24px; }
+  li { margin-bottom: 8px; }
+</style>
+<h1>BringNode Beta 22</h1>
+<ul>
+  <li>Welcome Tour ใหม่ พาตั้งภาษา สิทธิ์ และส่วนขยายเบราว์เซอร์ตั้งแต่เปิดครั้งแรก<br>A new Welcome Tour sets up language, permissions and the browser extension on first launch.</li>
+  <li>ปรับหน้า Settings ใหม่ทั้งหมด จัดกลุ่มให้หาง่ายขึ้น และรองรับ 14 ภาษา<br>Settings are redesigned with clearer groups and now support 14 languages.</li>
+  <li>เพิ่ม Appearance &amp; Pet: สัตว์เลี้ยงบนเกาะสูงสุด 3 ตัว, Theme Stickers และ Dynamic Glow แบบใหม่<br>New Appearance &amp; Pet: up to 3 island pets, Theme Stickers and a rebuilt Dynamic Glow.</li>
+  <li>เพิ่มโทน Dark ให้ Liquid Glass<br>Liquid Glass now has a Dark tone.</li>
+  <li>HUD เสียงและความสว่างแบบ Liquid Glass Pill ปรับค่าด้วยเมาส์ได้<br>Volume and Brightness HUD with a Liquid Glass Pill you can adjust with the mouse.</li>
+  <li>Media เลือกปุ่มซ้าย/ขวาได้ และเพิ่มแผง Lyrics, Sound, Queue, Sleep Timer<br>Media side buttons are now assignable, with Lyrics, Sound, Queue and Sleep Timer panels.</li>
+  <li>Lock Screen (ทดลอง): แผงเพลงแบบ Liquid Glass บนหน้าล็อก มีโหมดเนื้อเพลงและปก พร้อมตัวจำลองใน Settings สำหรับปรับแต่ง<br>Lock Screen (preview): a Liquid Glass music panel on the lock screen with Lyrics and artwork modes, plus a simulator in Settings to customize it.</li>
+  <li>การ์ดสายเรียกที่กำลังคุย, การประชุมผ่านเว็บ และตอบกลับการแจ้งเตือนจากเกาะ<br>Ongoing call card, web meeting support and notification replies from the island.</li>
+  <li>แจ้งเตือนแบตเตอรี่แบบใหม่ และแก้ปัญหาเกาะบนจอที่ไม่มี notch<br>New battery alert styles and fixes for displays without a notch.</li>
+  <li>เปลี่ยนชื่อที่เหลือทั้งหมดในแอปเป็น BringNode<br>Every remaining old name in the app is now BringNode.</li>
+  <li>หลังอัปเดต การตั้งค่าจะกลับเป็นค่าเริ่มต้น กรุณาตั้งค่าใหม่ ติดตั้ง hook ใหม่ในแอป และโหลดส่วนขยายเบราว์เซอร์ใหม่จากโฟลเดอร์ bringnode-extension<br>After updating, settings return to their defaults. Set them again, reinstall hooks in the app, and load the browser extension again from the bringnode-extension folder.</li>
+</ul>
+<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ BringNode และส่งความคิดเห็นครับ<br>Thank you for trying BringNode and sharing your feedback.</p>
+]]></description>
+            <enclosure url="https://github.com/izyouna/BringNode.update/raw/main/BringNode-1.0.0-beta.22.zip" length="29068621" type="application/octet-stream" sparkle:edSignature="2lQb/n87C9lBm9xN8aNMjns+mLL/MWkxpn+JRk7wQyhxHjB/DteQnF0jKCWyTiq2ygwfysSdpTzc+P7LH+c2DA=="/>
+        </item>
         <item>
             <title>1.0.0-beta.21</title>
             <pubDate>Fri, 06 Nov 2026 00:47:39 +0700</pubDate>
@@ -95,12 +127,12 @@
   h2 { font-size: 16px; margin-top: 24px; }
   li { margin-bottom: 8px; }
 </style>
-<h1>Potch Beta 17</h1>
+<h1>BringNode Beta 17</h1>
 <ul>
   <li>ปรับการอ้างอิงไอคอนแอปให้ใช้ชุดเต็มกรอบชื่อใหม่ตรงกัน<br>Updated app icon references to use the same newly named full-frame icon set.</li>
   <li>ตรวจแพ็กเกจเพื่อป้องกันไฟล์ไอคอนเก่าปะปนในการอัปเดต<br>Added package checks to prevent old icon resources from being included in updates.</li>
 </ul>
-<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ Potch และส่งความคิดเห็นครับ<br>Thank you for trying Potch and sharing your feedback.</p>
+<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ BringNode และส่งความคิดเห็นครับ<br>Thank you for trying BringNode and sharing your feedback.</p>
 ]]></description>
             <enclosure url="https://github.com/izyouna/Potch.update/raw/main/Potch-1.0.0-beta.17.zip" length="13222751" type="application/octet-stream" sparkle:edSignature="wd6QOVbKGX5K0pl/TgPyzPBEUKddJxGIgPoU7I9UnoFP38w0ROYIDlFLEvJ/AdUHOJa9iuVHzCAaEI/2mQ3yDA=="/>
         </item>
@@ -119,12 +151,12 @@
   h2 { font-size: 16px; margin-top: 24px; }
   li { margin-bottom: 8px; }
 </style>
-<h1>Potch Beta 16</h1>
+<h1>BringNode Beta 16</h1>
 <ul>
   <li>ปรับไอคอนแอปให้เต็มกรอบ และให้ทุกความละเอียดใช้รูปแบบเดียวกัน<br>Updated the app icon to fill its canvas consistently at every resolution.</li>
   <li>ทำให้ไฟล์ไอคอนของ macOS และไอคอนที่แอปโหลดใช้ตรงกัน<br>Unified the macOS icon and the icon loaded by the app.</li>
 </ul>
-<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ Potch และส่งความคิดเห็นครับ<br>Thank you for trying Potch and sharing your feedback.</p>
+<p>ขอบคุณผู้ใช้ทุกคนที่ทดลองใช้ BringNode และส่งความคิดเห็นครับ<br>Thank you for trying BringNode and sharing your feedback.</p>
 ]]></description>
             <enclosure url="https://github.com/izyouna/Potch.update/raw/main/Potch-1.0.0-beta.16.zip" length="13226165" type="application/octet-stream" sparkle:edSignature="ob/s7shjiVTCj6z/SDpDk9JNs7X35KiIzHLC1qAm2GQ1Z1iLNjfxJ7NxybSfbPA3I945MMpuO2G2FnqDb+P5BQ=="/>
         </item>
