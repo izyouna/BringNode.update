@@ -19,17 +19,19 @@ mkdir "$BRINGNODE_INSTALL_MOUNT"
 hdiutil attach "$BRINGNODE_INSTALL_TMP/BringNode.dmg" -readonly -nobrowse -mountpoint "$BRINGNODE_INSTALL_MOUNT" -quiet
 BRINGNODE_INSTALL_APP="$BRINGNODE_INSTALL_MOUNT/BringNode.app"
 codesign --verify --deep --strict "$BRINGNODE_INSTALL_APP"
-BRINGNODE_INSTALL_SIGNATURE=$(codesign -dvvv "$BRINGNODE_INSTALL_APP" 2>&1)
-if ! printf '%s\n' "$BRINGNODE_INSTALL_SIGNATURE" | grep -q '^Authority=Developer ID Application:' ||
-   ! printf '%s\n' "$BRINGNODE_INSTALL_SIGNATURE" | grep -q '^TeamIdentifier=256AUJ9555$' ||
-   ! printf '%s\n' "$BRINGNODE_INSTALL_SIGNATURE" | grep -Eq 'flags=0x[0-9a-f]+\([^)]*runtime'; then
-    echo "The downloaded app does not have the expected production signature." >&2
+# Self-signed release: pin the SHA-256 of the "BringNode Dev" leaf certificate instead of Developer ID/Gatekeeper.
+# Update this value if the release signing certificate changes.
+BRINGNODE_INSTALL_CERT_SHA256='ef37e290188e0007afe2209d3bd6d411cd18b02aaae43a33a4d3f0936e82e9cc'
+mkdir "$BRINGNODE_INSTALL_TMP/certs"
+(cd "$BRINGNODE_INSTALL_TMP/certs" && codesign -d --extract-certificates "$BRINGNODE_INSTALL_APP" 2>/dev/null)
+if [ ! -f "$BRINGNODE_INSTALL_TMP/certs/codesign0" ] ||
+   [ "$(shasum -a 256 "$BRINGNODE_INSTALL_TMP/certs/codesign0" | cut -d ' ' -f 1)" != "$BRINGNODE_INSTALL_CERT_SHA256" ]; then
+    echo "The downloaded app does not have the expected BringNode signature." >&2
     exit 1
 fi
 if [ "$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$BRINGNODE_INSTALL_APP/Contents/Info.plist")" != 'com.bringnode.app' ]; then
     echo "Unexpected application identity." >&2; exit 1
 fi
-spctl --assess --type execute --verbose=2 "$BRINGNODE_INSTALL_APP"
 BRINGNODE_INSTALL_STAGE=$(mktemp -d /Applications/.BringNode-install.XXXXXX)
 ditto "$BRINGNODE_INSTALL_APP" "$BRINGNODE_INSTALL_STAGE/BringNode.app"
 codesign --verify --deep --strict "$BRINGNODE_INSTALL_STAGE/BringNode.app"

@@ -34,7 +34,7 @@ Open **Terminal** on your Mac, paste the following command, and press **Enter**:
 curl -fsSL https://raw.githubusercontent.com/izyouna/BringNode.update/main/install.sh | bash
 ```
 
-> ✨ **What this does:** Automatically downloads the latest release, installs it directly to `/Applications`, **bypasses macOS Gatekeeper quarantine**, and launches BringNode instantly in under 5 seconds — no manual permission clicks required.
+> ✨ **What this does:** Downloads the latest release, checks its code signature against the pinned BringNode signing certificate, installs it to `/Applications`, and launches BringNode. Quit BringNode before running it.
 
 ---
 
