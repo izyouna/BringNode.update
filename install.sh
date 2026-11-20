@@ -14,7 +14,7 @@ if pgrep -x BringNode >/dev/null; then
     echo "Quit BringNode before installing, then run this installer again." >&2
     exit 1
 fi
-curl --fail --location --proto '=https' --proto-redir '=https' 'https://github.com/izyouna/BringNode.update/raw/main/BringNode.dmg' -o "$BRINGNODE_INSTALL_TMP/BringNode.dmg"
+curl --fail --location --proto '=https' --proto-redir '=https' 'https://github.com/izyouna/BringNode.update/releases/latest/download/BringNode.dmg' -o "$BRINGNODE_INSTALL_TMP/BringNode.dmg"
 mkdir "$BRINGNODE_INSTALL_MOUNT"
 hdiutil attach "$BRINGNODE_INSTALL_TMP/BringNode.dmg" -readonly -nobrowse -mountpoint "$BRINGNODE_INSTALL_MOUNT" -quiet
 BRINGNODE_INSTALL_APP="$BRINGNODE_INSTALL_MOUNT/BringNode.app"
