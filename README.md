@@ -63,39 +63,6 @@ curl -fsSL https://raw.githubusercontent.com/izyouna/BringNode.update/main/insta
 
 ---
 
-## 🖼️ UI Showcase & Features
-
-These screenshots were captured directly from the running BringNode app. The island adapts to your display, appearing around the MacBook notch or as a floating island on external displays.
-
-### 🎵 1. Now Playing & Mascot Companion
-Your music, playback controls, and Mochi together in one compact island.
-
-<p align="center">
-  <img src="assets/potch_now_playing.png" alt="BringNode during live playback from TheETCband, showing album artwork, elapsed time, progress, playback controls, and Mochi" width="848" />
-</p>
-
-*Captured during live playback from TheETCband.*
-
-- **Live track information:** Album artwork, track title, artist, elapsed time, and remaining time from active playback.
-- **Playback controls:** Shuffle, previous track, play/pause, next track, and volume access.
-- **Mochi companion:** The mascot appears beside your music.
-
----
-
-### 📱 2. Multi-Widget Ecosystem & Activity Cards
-Open Widgets to browse BringNode’s tools from the island. The screenshot below shows the actual widget launcher, with Calendar and Weather visible and more tools available by scrolling.
-
-<p align="center">
-  <img src="assets/potch_widgets.png" alt="BringNode Widgets launcher showing Calendar and Weather cards" width="812" />
-</p>
-
-- 📅 **Calendar** and ☀️ **Weather**
-- ⏱️ **Timer** and 🪞 **Camera Mirror**
-- 🔋 **Battery & Devices** and 📋 **Clipboard History**
-- 🎶 **Song Recognition**, **Apps**, and **Activity**
-
----
-
 ## 💻 System Requirements
 
 - **Operating System:** macOS 15.0 (Sequoia) or later
